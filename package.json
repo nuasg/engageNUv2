@@ -1,5 +1,5 @@
 {
-  "name": "simple-todos",
+  "name": "engageNUv2",
   "private": true,
   "scripts": {
     "start": "meteor run"
