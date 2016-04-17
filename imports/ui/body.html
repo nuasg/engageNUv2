@@ -1,7 +1,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Todo List ({{incompleteCount}})</h1>
+      <h1>Volunteer Opportunities ({{incompleteCount}})</h1>
       
       <label class="hide-completed">
         <input type="checkbox" />
@@ -12,7 +12,11 @@
 
       {{#if currentUser}}
         <form class="new-task">
-          <input type="text" name="text" placeholder="Type to add new tasks" />
+          <input type="text" name="title" placeholder="Type to add new volunteer opportunity" />
+          <input type="date" id="new-task-date" name="date" />
+          <input type="text" name="location" placeholder="Location" />
+          <input type="text" name="description" placeholder="Description" />
+          <input type="submit" name="submit" value="Submit" />
         </form>
       {{/if}}
     </header>
