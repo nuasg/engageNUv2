@@ -20,7 +20,7 @@ if (Meteor.isServer) {
 Meteor.methods({
   'tasks.insert'(title, date, location, description) {
     check(title, String);
-    check(date, String);
+    check(date, Date);
     check(location, String);
     check(description, String);
  
