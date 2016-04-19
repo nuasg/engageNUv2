@@ -47,7 +47,7 @@ nav h1 {
   float: right;
 }
 
-.new-task input {
+.newtask-form input {
   display: inline-block;
   box-sizing: border-box;
   margin: 10px 0;
@@ -58,13 +58,9 @@ nav h1 {
   font-size: 1em;
 }
 
-.new-task input:focus{
+.newtask-form input:focus{
   outline: 0;
   border-bottom: 1px solid black;
-}
-
-#btn-submit {
-  cursor: pointer;
 }
 
 .tasks-list {

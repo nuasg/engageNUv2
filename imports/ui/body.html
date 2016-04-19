@@ -1,5 +1,5 @@
 <body>
-  <div class="container">
+  <div>
     <nav>
       <h1>EngageNU</h1>
 
@@ -13,8 +13,8 @@
       </label> -->
     </nav>
 
-    <header>
-      <!-- {{#if currentUser}}
+    <!-- <header>
+      {{#if currentUser}}
         <form class="new-task">
           <input type="text" name="title" placeholder="New volunteer opportunity" />
           <input type="date" id="new-task-date" name="date" />
@@ -22,12 +22,24 @@
           <input type="text" name="description" placeholder="Description" />
           <button type="submit" id="btn-submit">Submit</button>
         </form>
-      {{/if}} -->
-    </header>
- 
+      {{/if}}
+    </header> -->
+
+    <div>
+      {{#if currentUser}}
+        <!-- <button type="button" class="btn btn-primary" id="btn-newtask">Add</button> -->
+
+        {{> newtask}}
+        <!-- <div>
+          {{> newtask}}
+        </div> -->
+      {{/if}}
+    </div>
+
     <ul class="tasks-list">
-      <li>
+      <!-- <li>
         {{#if currentUser}}
+          <button type="button" class="btn btn-primary" id="btn-newtask">Add</button>
           <form class="new-task">
             <div><input type="text" name="title" placeholder="New volunteer opportunity" /></div>
             <div>Date: <input type="date" id="new-task-date" name="date" /></div>
@@ -36,7 +48,7 @@
             <div><button type="submit" id="btn-submit">Submit</button></div>
           </form>
         {{/if}}
-      </li>
+      </li> -->
 
       {{#each tasks}}
         {{> task}}
