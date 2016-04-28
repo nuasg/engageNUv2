@@ -16,13 +16,17 @@ Template.body.onCreated(function bodyOnCreated() {
 Template.body.helpers({
   tasks() {
     const instance = Template.instance();
-    if (instance.state.get('hideCompleted')) {
-      // If hide completed is checked, filter tasks
-      return Tasks.find({ date: { $gte: new Date()} }, { sort: { date: 1 } });
-    }
+    // if (instance.state.get('hideCompleted')) {
+    //   // If hide completed is checked, filter tasks
+    //   var yesterday = new Date();
+    //   yesterday.setDate(today.getDate() - 1);
+    //   return Tasks.find({ endDate: { $gte: yesterday} }, { checked: { $ne: true } }, { sort: { createdAt: -1 } });
+    // }
     // Otherwise, return all of the tasks
     // Show newest tasks at the top
-    return Tasks.find({ date: { $gte: new Date()} }, { sort: { date: 1 } });
+    var yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    return Tasks.find({ endDate: { $gte: yesterday } }, { sort: { createdAt: -1 } });
   },
   // incompleteCount() {
   //   return Tasks.find({ checked: { $ne: true } }).count();

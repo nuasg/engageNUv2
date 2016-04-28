@@ -47,6 +47,12 @@ nav h1 {
   float: right;
 }
 
+#btn-newtask {
+  margin-left: 15%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .newtask-form input {
   display: inline-block;
   box-sizing: border-box;
@@ -61,6 +67,10 @@ nav h1 {
 .newtask-form input:focus{
   outline: 0;
   border-bottom: 1px solid black;
+}
+
+#newtask-error {
+  color: red;
 }
 
 .tasks-list {

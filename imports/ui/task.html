@@ -15,8 +15,11 @@
     {{/if}} -->
  
     <h3 class="text">{{title}}</h3>
-    <h5 class="text">Date: {{prettifyDate date}}</h5>
+    <h5 class="text">Start Date: {{prettifyDate startDate}}</h5>
+    <h5 class="text">End Date: {{prettifyDate endDate}}</h5>
     <h5 class="text">Location: {{location}}</h5>
+    <h5 class="text">Contact Email: {{ contactInfo.email }}</h5>
+    <h5 class="text">Contact Phone: {{ contactInfo.phone }}</h5>
     <h5 class="text">Description: {{description}}</h5>
   </li>
 </template>
